@@ -2,16 +2,17 @@
 using namespace std;
 int main()
 {
-    cout<<"Enter three numbers ";
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a>b&&a>c){
-        cout<<"A is the greatest";
+    cout << "Enter a year";
+    int year;
+    cin >> year;
+    if ((year % 4 == 0 &&year % 100 != 0) || (year % 400 == 0))
+    {
+        cout << "The year is a leap year";
     }
-     else if(b>a&&b>c){
-           cout<<"B is the greatest"; 
-        }else{
-            cout<<"C is the greatest";
-        }
-        return 0;
+    else
+    {
+        cout << "The year is not a leap year";
+    }
+
+    return 0;
 }
