@@ -1,44 +1,16 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    char colour;
+int main(){
 
-while (true)
-    {
-      switch(colour);  
-
-    cout << "Enter a colour";
-    cin >> colour;
-
-    
-       
-    switch (colour)
-    {
-       
-    case 'r':
-        cout << "STOP"<<endl;
-        break;
-
-    case 'y':
-        cout << "WAIT"<<endl;
-        break;
-
-    case 'g':
-        cout << "GO"<<endl;
-        break;
-        
-    case 's':
-        cout<<"GoodBye"<<endl;
-        return 0;
-
-    default:
-        cout << "Invalid Input"<<endl;
-    }
-
-    }
-
-        cout<<"Bye";
-
+int n,multiplication=1;
+ cout<<"Enter a number for multiplication: ";
+ cin>>n;
+ for (int i = 1; i <= 10; i++)
+ {
+    cout<<n<<" * "<<i<<" = "<<n*i;
+    cout<<endl;
+ }
+   
     return 0;
+    
 }
