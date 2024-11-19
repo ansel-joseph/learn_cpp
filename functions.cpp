@@ -1,9 +1,14 @@
 #include<iostream>
 using namespace std;
-void name(){
-    cout<<"My name is John";
+int multiply(int a,int b){
+    return a*b;
 }
 int main(){
-    name();
-    return 0;
+    int num1, num2;
+    cout<<"Enter 2 numbers: ";
+    cin>>num1>>num2; 
+
+int result= multiply(num1, num2);
+cout<<"Multiplication= "<<result;
+return 0;
 }
