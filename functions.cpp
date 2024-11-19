@@ -1,9 +1,12 @@
 #include<iostream>
 using namespace std;
-void greet(){
-    cout<<"Hello World";
+void firstNumber(int a){
+    a=5;
+cout<<"The first number is "<<a;
 }
 int main(){
-greet();
-return 0;
+    int num1=6;
+    cout<<"The second number is "<<num1<<endl;
+    firstNumber(num1);
+    return 0;
 }
