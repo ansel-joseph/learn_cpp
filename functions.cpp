@@ -1,12 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void firstNumber(int a){
-    a=5;
-cout<<"The first number is "<<a;
-}
-int main(){
-    int num1=6;
-    cout<<"The second number is "<<num1<<endl;
-    firstNumber(num1);
+
+int main() {
+
+    int* age = new int;
+
+    cout << "Enter the student's age: ";
+    cin >> *age;
+
+    cout << "The student's age is: " << *age << endl;
+
+    delete age;
+
     return 0;
 }
