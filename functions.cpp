@@ -1,16 +1,13 @@
 #include <iostream>
 using namespace std;
 
-inline int areaRect(int length, int breadth){
-    return length*breadth;
+inline int numberAverage(int num1, int num2, int num3){
+    return (num1+num2+num3)/3;
 }
 int main(){
-    int l,b;
-    cout<<"Enter the length of the rectangle: ";
-    cin>>l;
-    cout<<"Enter the breadth of the rectangle: ";
-    cin>>b;
-
-    cout<<"Area of the rectangle is: "<<areaRect(l,b);
+    int a,b,c;
+    cout<<"Enter three numbers: ";
+    cin>>a>>b>>c;
+    cout<<"The average is: "<<numberAverage(a,b,c);
     return 0;
 }
