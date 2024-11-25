@@ -1,13 +1,14 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-inline int numberAverage(int num1, int num2, int num3){
-    return (num1+num2+num3)/3;
-}
-int main(){
-    int a,b,c;
-    cout<<"Enter three numbers: ";
-    cin>>a>>b>>c;
-    cout<<"The average is: "<<numberAverage(a,b,c);
+int main() {
+    int x = 10; 
+    int* ptr = &x;   
+
+    cout << "Value of x: " << x << endl;   
+    cout << "Address of x: " << &x << endl; 
+    cout << "Value of ptr: " << ptr << endl;
+    cout << "Value pointed by ptr: " << *ptr << endl; 
+
     return 0;
 }
