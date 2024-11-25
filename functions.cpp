@@ -1,14 +1,24 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+
+void fightPain(int remainingPains) {
+
+    if (remainingPains == 0) {
+        cout << "Naruto defeats Nagato!" << endl;
+        return;
+    }
+    
+    cout << "Naruto fights Pain number " << remainingPains << endl;
+
+    fightPain(remainingPains - 1);
+}
+
 int main() {
-    int x = 10; 
-    int* ptr = &x;   
-
-    cout << "Value of x: " << x << endl;   
-    cout << "Address of x: " << &x << endl; 
-    cout << "Value of ptr: " << ptr << endl;
-    cout << "Value pointed by ptr: " << *ptr << endl; 
-
+    int totalPains = 6;  
+    
+    cout << "Naruto begins his mission to fight the Pains!" << endl;
+    fightPain(totalPains);
+    
     return 0;
 }
