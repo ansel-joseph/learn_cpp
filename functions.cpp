@@ -1,12 +1,20 @@
 #include <iostream>
 using namespace std;
 
-inline int square(int x) {
-    return x * x;
+int addNumbers(int a, int b) {
+    return a + b;
 }
 
 int main() {
-    int num = 5;
-    cout << "The square of " << num << " is " << square(num) << endl;
+    int num1, num2;
+    
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    int result = addNumbers(num1, num2);
+    cout << "The sum is: " << result << endl;
+    
     return 0;
 }
