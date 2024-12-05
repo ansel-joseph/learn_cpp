@@ -1,13 +1,18 @@
-    #include<iostream>
-    using namespace std;
-    int main(){
-      int n;
-      int sum=0;
-      cout<<"Enter a number: ";
-      cin>>n;
-      for(int i=2; i<=n; i+=2){
-        sum+=i;
-      }
-      cout<<"The sum of the first "<<n<<" even numbers is: "<<sum;
-        return 0;
+#include <iostream>
+using namespace std;
+
+int main() {
+    int size;
+
+    cout << "Enter the size of the square: ";
+    cin >> size;
+
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            cout << "* ";
+        }
+        cout << endl;
     }
+
+    return 0;
+}
