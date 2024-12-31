@@ -2,10 +2,11 @@
 using namespace std;
 
 int main() {
-    int a,b,c,result;
-    cout<<"Enter 3 numbers: ";
-    cin>>a>>b>>c;
-    result=(a>b&&a>c)? a:((b>c&&b>a)?b:c);
-    cout<<"The largerst number: "<<result;
+    int a=1, b=2;
+    cout<<"Before swap: a="<<a<<" and b="<<b<<endl;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    cout<<"After swap: a="<<a<<" and b="<<b<<endl;
     return 0;
 }
