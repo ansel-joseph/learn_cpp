@@ -1,18 +1,14 @@
 #include<iostream>
 using namespace std;
 int main(){
-  int n,i;
-  cout<<"Enter a number: ";
-  cin>>n;
-  for (int i = 2; i <= n/2; i++)
+  
+  cout<<"Tha Pattern is: "<<endl;
+  for (int i = 5; i >=1; i--)
   {
-    if(n%i==0){
-      cout<<"The number is Not Prime";
-      break;
-    }else{
-      cout<<"The number is Prime";
+    for(int j = 1; j<=i; j++){
+      cout<<"*";
     }
+    cout<<endl;
   }
   return 0;
 }
-
