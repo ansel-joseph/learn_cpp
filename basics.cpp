@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int a=1, b=2;
-    cout<<"Before swap: a="<<a<<" and b="<<b<<endl;
-    a=a+b;
-    b=a-b;
-    a=a-b;
-    cout<<"After swap: a="<<a<<" and b="<<b<<endl;
+int length = 10;
+int main(){
+    int length, breadth, area;
+    length=5;
+    breadth=3;
+    area=length*breadth;
+    cout<<"The area of the rectangle is: "<<area<<endl;
+    cout<<"The local variable length is: "<<length<<endl;
+    cout<<"The global variable legth is: "<<::length;
     return 0;
+
 }
