@@ -2,28 +2,33 @@
 using namespace std;
 int main()
 {
-    cout << "Enter two numbers";
-    int a, b;
-    cin >> a >> b;
-    char operation;
-    cout << "Enter the operation";
-    cin >> operation;
-    switch (operation)
+    int marks;
+    cout << "Enter the marks of the student: ";
+    cin >> marks;
+
+    if (marks > 100 || marks < 0)
     {
-    case ('+'):
-        cout << a + b;
-        break;
-    case ('-'):
-        cout << a - b;
-        break;
-    case ('*'):
-        cout << a * b;
-        break;
-    case ('/'):
-        cout << a / b;
-        break;
-    default:
         cout << "Invalid";
+    }
+    else if (marks >= 90)
+    {
+        cout << "Grade is A";
+    }
+    else if (marks >= 80)
+    {
+        cout << "Grade is B";
+    }
+    else if (marks >= 70)
+    {
+        cout << "Grade is C";
+    }
+    else if (marks >= 60)
+    {
+        cout << "Grade is D";
+    }
+    else
+    {
+        cout << "Grade is F";
     }
     return 0;
 }
