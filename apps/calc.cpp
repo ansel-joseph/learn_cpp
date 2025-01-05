@@ -1,34 +1,36 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    int marks;
-    cout << "Enter the marks of the student: ";
-    cin >> marks;
 
-    if (marks > 100 || marks < 0)
-    {
-        cout << "Invalid";
+class Armstrong{
+    private: 
+    int n, original, sum=0;
+    public:
+    void display(){
+        cout<<"Enter an armstrong number: ";
+        cin>>n;
     }
-    else if (marks >= 90)
+    void calculate(){
+        original=n;
+    while (n>0)
     {
-        cout << "Grade is A";
+        int digit=n%10;
+        sum+=digit*digit*digit;
+        n/=10;
+        
     }
-    else if (marks >= 80)
-    {
-        cout << "Grade is B";
+    if(original==sum){
+        cout<<original<<" is an armstrong number";
+    }else{
+        cout<<"It is not an armstrong number";
     }
-    else if (marks >= 70)
-    {
-        cout << "Grade is C";
     }
-    else if (marks >= 60)
-    {
-        cout << "Grade is D";
-    }
-    else
-    {
-        cout << "Grade is F";
-    }
+};
+int main() {
+    Armstrong a;
+    a.display();
+    a.calculate();
+    
+    
+
     return 0;
 }
