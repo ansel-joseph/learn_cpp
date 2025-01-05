@@ -1,36 +1,31 @@
 #include <iostream>
 using namespace std;
-class Student{
+class Rectangle{
     private:
-    char name[100];
-    int rollNo;
-    int year;
-    char programme [100];
+    int l;
+    int b;
+    int calculateArea(){
+        return l*b;
+    }
     public:
-    void putData(){
-        cout<<"Enter the name of the student: ";
-        cin>>name;
-        cout<<"Enter the Roll Number: ";
-        cin>>rollNo;
-        cout<<"Enter the year of joining: ";
-        cin>>year;
-        cout<<"Enter the programme taken";
-        cin>>programme;
+    void getValue(int a, int w){
+        l=a;
+        b=w;
     }
-    void displayData(){
-        cout<<"---STUDENT INFORMATION---"<<endl;
-        cout<<"Name           : "<<name<<endl;
-        cout<<"Roll Number    : "<<rollNo<<endl;
-        cout<<"Year of joining: "<<year<<endl;
-        cout<<"Programme taken: "<<programme<<endl;
-
+    void display(){
+        cout<<"Length: "<<l<<endl;
+        cout<<"Breadth: "<<b<<endl;
+        cout<<"Area: "<<calculateArea()<<endl;
     }
-
 };
-
-int main(){
-    Student s;
-    s.putData();
-    s.displayData();
-    return 0;
-}
+    int main(){
+        Rectangle r;
+        int l,b;
+        cout<<"Enter the length: ";
+        cin>>l;
+        cout<<"Enter the breadth: ";
+        cin>>b;
+        r.getValue(l,b);
+        r.display();
+        return 0;
+    }
