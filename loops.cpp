@@ -1,17 +1,29 @@
 #include<iostream>
 using namespace std;
 int main(){
-  cout<<"Prime numbers from 1 to 100 are :"<<endl;
-  for(int i=2; i<=100; i++){
-    for(int j=2; j<=i; j++){
-      if(i%j==0){
-        break;
-      }
-    }
-    if(int j==i){
-      cout<<i<<endl;
-    }
+int rows, cols, matrix[50][50], transpose[50][50];
+cout<<"Enter the rows and columns: ";
+cin>>rows>>cols;
+
+cout<<"Enter the elements of the matrix: ";
+for(int i=0; i<rows; i++){
+  for(int j=0; j<cols; j++){
+    cin>>matrix[i][j];
   }
-cout<<endl;
+}
+
+for(int i=0; i<rows; i++){
+  for(int j=0; j<cols; j++){
+    transpose[j][i]=matrix[i][j];
+  }
+}
+cout<<"Transpose Matrix: "<<endl;
+for(int i=0; i<cols; i++){
+  for(int j=0; j<rows; j++){
+    cout<<transpose[i][j]<<" ";
+  }
+  cout<<endl;
+}
+
 return 0;
 }
