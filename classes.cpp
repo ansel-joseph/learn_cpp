@@ -1,31 +1,45 @@
 #include <iostream>
 using namespace std;
-class Rectangle{
-    private:
-    int l;
-    int b;
-    int calculateArea(){
-        return l*b;
+
+class Circle {
+private:
+    double radius;  // Private attribute for radius
+
+public:
+    // Default constructor
+    Circle() {
+        radius = 0.0;  // Initialize radius to 0
     }
-    public:
-    void getValue(int a, int w){
-        l=a;
-        b=w;
+
+    // Parameterized constructor
+    Circle(double r) {
+        radius = r;  // Initialize radius to the specific value
     }
-    void display(){
-        cout<<"Length: "<<l<<endl;
-        cout<<"Breadth: "<<b<<endl;
-        cout<<"Area: "<<calculateArea()<<endl;
+
+    // Member function to calculate and return the area
+    double calculateArea() {
+        return 3.14159 * radius * radius;  // Area = πr²
+    }
+
+    // Member function to display the radius and area
+    void display() {
+        cout << "Radius: " << radius << endl;
+        cout << "Area: " << calculateArea() << endl;
     }
 };
-    int main(){
-        Rectangle r;
-        int l,b;
-        cout<<"Enter the length: ";
-        cin>>l;
-        cout<<"Enter the breadth: ";
-        cin>>b;
-        r.getValue(l,b);
-        r.display();
-        return 0;
-    }
+
+int main() {
+    // Object using default constructor
+    Circle c1;
+    cout << "Circle with default constructor:" << endl;
+    c1.display();
+
+    // Object using parameterized constructor
+    
+
+    Circle c2(3);
+    cout << "Circle with parameterized constructor:" << endl;
+    c2.display();
+
+    return 0;
+}
