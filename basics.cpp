@@ -2,28 +2,22 @@
 using namespace std;
 
 int main() {
-    int n = 5; // Total number of rows
-
-    // Outer loop for the number of rows
-    for (int i = 1; i <= n; i++) {
-        // Loop for printing spaces before numbers
-        for (int j = 1; j <= n - i; j++) {
-            cout << " "; // Print spaces
-        }
-
-        // Loop for printing the increasing numbers
-        for (int j = 1; j <= i; j++) {
-            cout << j << " "; // Print increasing numbers
-        }
-
-        // Loop for printing the decreasing numbers
-        for (int j = i - 1; j >= 1; j--) {
-            cout << j << " "; // Print decreasing numbers
-        }
-
-        // Move to the next line after finishing the current row
-        cout << endl;
-    }
-
+    int n, sum = 0, reverse = 0, digit;
+    
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    int original = n; 
+    
+    do {
+        digit = n % 10;  
+        sum += digit;    
+        reverse = reverse * 10 + digit;  
+        n /= 10;         
+    } while (n > 0);  
+    
+    cout << "Sum of digits of " << original << " is " << sum << endl;
+    cout << "Reverse of " << original << " is " << reverse << endl;
+    
     return 0;
 }
